@@ -3,6 +3,9 @@ console.log("App Started");
 import tmi from "tmi.js";
 import { BOT_USERNAME, OAUTH_TOKEN, CHANNEL_NAME } from "./constants.js";
 
+const leftLane = [];
+const rightLane = [];
+
 const options = {
   options: { debug: true },
   connection: {
@@ -27,5 +30,17 @@ client.on("message", (channel, tags, message, self) => {
   if (message.toLowerCase() === "!hello") {
     // "@alca, heya!"
     client.say(channel, `@${tags.username}, heya!`);
+  }
+
+  // left vote
+  if (message.toLowerCase() === "!left") {
+    leftLane.push(tags.username);
+    console.log(leftLane);
+  }
+
+  // right vote
+  if (message.toLowerCase() === "!right") {
+    rightLane.push(tags.username);
+    console.log(rightLane);
   }
 });
