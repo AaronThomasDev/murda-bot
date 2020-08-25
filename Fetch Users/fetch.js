@@ -1,3 +1,5 @@
+// Fetch chat users
+
 fetch("https://tmi.twitch.tv/group/user/darkosto/chatters")
   .then(function (response) {
     return response.json();
