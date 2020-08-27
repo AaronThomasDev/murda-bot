@@ -5,7 +5,7 @@ The main function of the bot is for "betting" a fake currency on drag races. The
 Short Term Goals:
 
 - Give current chat users currency via a command: !givecash 100
-- let them choose which lane to win: !lane1 100 or !lane2 100
+- let them choose which lane to win and a bet ammount: !lane1 100 or !lane2 100
 - winning pays out the same ammount as their bet: bet 100, get 200 back for winning
 
 Long Term Goals:

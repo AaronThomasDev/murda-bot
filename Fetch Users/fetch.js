@@ -1,6 +1,9 @@
 // Fetch chat users
 
-fetch("https://tmi.twitch.tv/group/user/darkosto/chatters")
+var proxyUrl = "https://cors-anywhere.herokuapp.com/",
+  targetUrl = "https://tmi.twitch.tv/group/user/sevadus/chatters";
+
+fetch(proxyUrl + targetUrl)
   .then(function (response) {
     return response.json();
   })
